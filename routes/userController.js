@@ -22,6 +22,6 @@ router.post('/', (req, res) => {
         .then(() => {
             res.redirect('/user');
         });
-})
+});
 
 module.exports = router;
