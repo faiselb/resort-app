@@ -1,13 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const User = require('../models/User')
 
 router.get('/', (req, res, next) => {
-    res.render('user/index', { title: 'Express' });
+    User.find()
+    .then((users) => {
+      res.render('user/index', { users: users });
+    })
+    .catch((err) => res.send(err));
 });
 
 // sign up route
 router.get('/new', (req, res) => {
-    res.render('user/new')
+    res.render('user/new');
 });
 
 module.exports = router;
