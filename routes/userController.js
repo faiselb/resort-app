@@ -15,4 +15,13 @@ router.get('/new', (req, res) => {
     res.render('user/new');
 });
 
+router.post('/', (req, res) => {
+    const newUser = req.body;
+    User
+        .create(newUser)
+        .then(() => {
+            res.redirect('/user');
+        });
+})
+
 module.exports = router;
