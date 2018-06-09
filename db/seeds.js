@@ -18,14 +18,14 @@ Resort.remove()
     User.remove().then(() => {
         const activity1 = new Activity({
             name: 'John Smith',
-            activityType: 'surfing',
+            activityType: 'Surfing',
             date: new Date(),
             time:'8:00 pm'
         });
 
         const activity2 = new Activity({
             name: 'Adam Smith',
-            activityType: 'hiking',
+            activityType: 'Hiking',
             date: new Date(),
             time: '9:00 am'
         });
