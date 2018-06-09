@@ -23,4 +23,19 @@ router.post('/', (req, res) => {
         });
 });
 
+router.get('/:id', (req, res) => {
+    Resort
+        .findById(req.params.id)
+        .then((resort) => {
+            res.render('resort/show', { resort })
+        })
+});
+
+router.delete('/:id', (req, res) => {
+    Resort.findByIdAndRemove(req.params.id)
+        .then(() => {
+            res.redirect('/resort');
+        })
+});
+
 module.exports = router;

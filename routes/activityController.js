@@ -14,4 +14,25 @@ router.get('/', (req, res, next) => {
     })
 });
 
+router.get('/new', (req, res) => {
+    res.render('activity/new', {
+        resortId: req.params.resortId
+    });
+});
+
+router.post('/', (req, res) => {
+    const activity = new Activity(req.body);
+
+    Resort.findById(req.params.resortId)
+        .then((resort) => {
+
+        resort.activities.push(activity);
+
+        resort.save().then(()=> {
+            res.redirect(`/resort/${req.params.resortId}/activity`);
+        });
+    });
+})
+
+  
 module.exports = router;

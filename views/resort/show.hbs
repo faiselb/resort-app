@@ -1,0 +1,12 @@
+<div>
+    <h2> Selected Resort </h2>
+</div>
+
+<p>Resort Name: {{ resort.name }}<p>
+<p>Resort Location: {{ resort.location }}<p>
+<form action="/resort/{{resort._id}}" method="DELETE">
+  <button type="submit">Delete Resort</button>
+</form>
+
+ 
+<a href="/resort/{{resort._id}}/activity/new"><button> Or Continue to Reserve Activity </button></a>
