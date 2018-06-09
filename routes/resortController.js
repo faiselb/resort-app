@@ -31,6 +31,20 @@ router.get('/:id', (req, res) => {
         })
 });
 
+router.get('/:id/edit', (req, res) => {
+    Resort
+      .findById(req.params.id)
+      .then((resort) => {
+        res.render('resort/edit', { resort: resort });
+      });
+  })
+  
+router.put('/:id', (req, res) => {
+    Resort.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
+        res.redirect(`/resort/${req.params.id}`);
+    });
+});
+
 router.delete('/:id', (req, res) => {
     Resort.findByIdAndRemove(req.params.id)
         .then(() => {
