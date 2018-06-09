@@ -6,6 +6,7 @@ const app = express();
 
 const indexRouter = require('./routes/index');
 const userController = require('./routes/userController');
+const activityController = require('./routes/activityController');
 const resortController = require('./routes/resortController');
 
 mongoose.connect('mongodb://localhost/bookingdb')
@@ -23,7 +24,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.use('/', indexRouter);
-app.use('/resort', resortController)
+app.use('/resort', resortController);
+app.use('/resort/:resortId/activity', activityController);
 app.use('/user', userController);
 
 module.exports = app;

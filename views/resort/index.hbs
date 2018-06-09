@@ -1,3 +1,14 @@
-hello from resorts
+<div>
+    <h2> Our Resorts </h2>
+</div>
 
-There are currently {{ resorts.length }} resorts.
+<ul>
+{{#each resorts}}
+<li>
+    <a href="/resort/{{_id}}">
+    <p>{{name}}</p>
+    <p>{{location}}</p>
+    </a>
+</li>
+{{/each}}
+</ul>
