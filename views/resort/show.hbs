@@ -4,7 +4,7 @@
 
 <p>Resort Name: {{ resort.name }}<p>
 <p>Resort Location: {{ resort.location }}<p>
-<form action="/resort/{{resort._id}}" method="DELETE">
+<form action="/resort/{{resort._id}}?_method=DELETE" method="POST">
   <button type="submit">Delete Resort</button>
 </form>
 

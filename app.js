@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override')
 
 const app = express();
 
@@ -17,8 +18,10 @@ mongoose.connect('mongodb://localhost/bookingdb')
     console.log('Error connecting to database', err);
 });
 
+app.use(methodOverride('_method'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
