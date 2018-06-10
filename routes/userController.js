@@ -24,4 +24,19 @@ router.post('/', (req, res) => {
         });
 });
 
+router.get('/:id', (req, res) => {
+    User
+        .findById(req.params.id)
+        .then((user) => {
+            res.render('user/show', { user: user });
+        });
+});
+
+router.delete('/:id', (req, res) => {
+    User.findByIdAndRemove(req.params.id)
+        .then(() => {
+            res.redirect('/user');
+        });
+});
+
 module.exports = router;

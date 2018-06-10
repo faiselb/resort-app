@@ -1,3 +1,17 @@
-hello from users
+<div>
+<h2>Guests(Users)</h2>
+<h2> Pick a User and Continue With Your reservation</h2>
+</div>
 
-There are currently {{ users.length }} users.
+
+<ul>
+{{#each users}}
+<li>
+    <a href="/user/{{_id}}">
+    <p>{{username}}</p>
+    <p>{{email}}</p>
+    <p>{{signupmessage}}</p>
+    </a>
+</li>
+{{/each}}
+</ul>
