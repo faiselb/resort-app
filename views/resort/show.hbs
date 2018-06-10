@@ -5,8 +5,8 @@
 <p>Resort Name: {{ resort.name }}<p>
 <p>Resort Location: {{ resort.location }}<p>
 <form action="/resort/{{resort._id}}?_method=DELETE" method="POST">
-  <button type="submit">Delete Resort</button>
+  <button type="submit" class="btn btn-danger">Delete Resort</button>
 </form>
 
-<a href="/resort/{{resort._id}}/edit"><button>Edit Resort</button></a>
-<a href="/resort/{{resort._id}}/activity/new"><button> Or Continue to Reserve Activity </button></a>
+<a href="/resort/{{resort._id}}/edit"><button class="btn btn-primary">Edit Resort</button></a>
+<a href="/resort/{{resort._id}}/activity/new"><button class="btn btn-primary"> Or Continue to Reserve Activity </button></a>
