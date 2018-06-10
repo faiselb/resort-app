@@ -1,16 +1,16 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-const methodOverride = require('method-override')
-
+const methodOverride = require('method-override');
 const app = express();
 
+require('dotenv').config();
 const indexRouter = require('./routes/index');
 const userController = require('./routes/userController');
 const activityController = require('./routes/activityController');
 const resortController = require('./routes/resortController');
 
-mongoose.connect('mongodb://localhost/bookingdb')
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
     console.log('connected to database.');
 })
