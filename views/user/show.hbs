@@ -1,13 +1,20 @@
 <div>
     <h2> Users </h2>
 </div>
-<p>{{user.username}}</p>
+
+<div class="user-signup">
+<p>User: {{user.username}}</p>
 <p>Email: {{user.email}}</p>
-<p>How Did You Find Us?: {{user.signupmessage }}</p>
+<p>How Did You Find Us?</p> 
+</p>{{user.signupmessage }}</p>
 
 
 <form action="/user/{{user._id}}?_method=DELETE" method="POST">
+<br >
     <button class="btn btn-danger" type="submit">Delete User</button>
 </form>
+<br >
 
-<a href="/resort/new" class="btn btn-primary"> Or Book Now</a>
+<a href="/resort/new?userid={{user._id}}" class="btn btn-primary"> Or Book Now</a>
+
+</div>

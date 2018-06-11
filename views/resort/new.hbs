@@ -3,16 +3,18 @@
     <h2>Pick Resort</h2>
   </div>
 
-
-  <form action="/resort" method="POST">
+<div class="user-signup">
+  <form action="/resort?userid={{userid}}" method="POST">
     <div>
       <label for="name">Enter Resort Name</label>
-      <input type="text" name="name" placeholder="Enter Resort Name" />
+      <input type="text" name="name"/>
     </div>
     <div>
       <label for="location">Enter Resort Location</label>
-      <input type="text" name="location" placeholder="Enter Resort Location" />
+      <input type="text" name="location"/>
     </div>
-
+<br >
     <button class="btn btn-primary" type="submit">Add Resort</button>
   </form>
+  
+  </div>

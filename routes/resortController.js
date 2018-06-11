@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Resort = require('../models/Resort');
+const User = require('../models/User');
 
 router.get('/', (req, res, next) => {
     Resort.find()
@@ -11,16 +12,32 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/new', (req, res) => {
-    res.render('resort/new');
+    const userid = req.query.userid;
+    res.render('resort/new', { userid: userid});
 });
   
 router.post('/', (req, res) => {
     const newResort = req.body;
-    Resort
-        .create(newResort)
-        .then(() => {
-            res.redirect('/resort');
+    const userid = req.query.userid;
+    if (userid) {
+        User.findById(userid)
+        .then((user) => {
+            Resort
+            .create(newResort)
+            .then((resort) => {
+                user.reservations.push(resort);
+                user.save().then(() => {
+                    res.redirect('/resort/' + resort._id);
+                });
+            });
         });
+    } else {
+        Resort
+        .create(newResort)
+        .then((resort) => {
+            res.redirect('/resort/' + resort._id);
+        });
+    }
 });
 
 router.get('/:id', (req, res) => {

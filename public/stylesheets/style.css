@@ -114,3 +114,22 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #cc5500;
 }
+
+.user-signup {
+    text-align: center;
+    color: #cc5500;
+     font-size: 25px;   
+}
+
+a {
+    text-decoration: none;
+    color: #cc5500;
+    font-size: 25px;   
+}
+
+.activity {
+    text-align: center;
+    color: #cc5500;
+    font-size: 22px;
+
+}

@@ -1,12 +1,17 @@
 <div>
     <h2> Selected Resort </h2>
 </div>
+<div class="user-signup">
 
 <p>Resort Name: {{ resort.name }}<p>
 <p>Resort Location: {{ resort.location }}<p>
 <form action="/resort/{{resort._id}}?_method=DELETE" method="POST">
   <button type="submit" class="btn btn-danger">Delete Resort</button>
+  
 </form>
-
+<br >
 <a href="/resort/{{resort._id}}/edit"><button class="btn btn-primary">Edit Resort</button></a>
+<br >
+<br >
 <a href="/resort/{{resort._id}}/activity/new"><button class="btn btn-primary"> Or Continue to Reserve Activity </button></a>
+</div>

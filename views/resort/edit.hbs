@@ -2,6 +2,8 @@
     <h2> Edit Resort</h2>
 </div>
 
+<div class="user-signup">
+
 <form action="/resort/{{resort._id}}?_method=PUT" method="POST">
 <div>
     <label for="name">Resort Name</label>
@@ -11,6 +13,7 @@
     <label for="location">Resort Location</label>
     <input type="text" name="location" value={{resort.location}} />
 </div>
-
+<br >
 <button class="btn btn-primary" type="submit">Update</button>
 </form>
+</div>
