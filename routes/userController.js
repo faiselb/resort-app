@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     User.findByIdAndRemove(req.params.id)
         .then(() => {
-            res.redirect('/user');
+            res.redirect('/');
         });
 });
 
