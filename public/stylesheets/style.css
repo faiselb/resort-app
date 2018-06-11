@@ -121,6 +121,11 @@ header {
      font-size: 25px;   
 }
 
+.btn-custom {
+    background-color: #cc5500;
+    color: #ececec;
+}
+
 a {
     text-decoration: none;
     color: #cc5500;
