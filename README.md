@@ -18,7 +18,7 @@ https://trello.com/c/ZX75CZBB
 
 https://trello.com/c/KUFAM5Jb
 
-# libraries
+# Libraries
 
 * Handlebars
 * Express
