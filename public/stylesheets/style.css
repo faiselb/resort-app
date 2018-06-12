@@ -144,3 +144,6 @@ a {
     font-size: 22px;
 }
 
+a:hover {
+color: #cc5500;
+}
