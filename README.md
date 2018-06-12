@@ -1,6 +1,6 @@
 # Project Description
 
-This app is a full stack server application. The goal of the app is allowing users to book travel activities at a resort. Users will sign up and share their name and email ,user will be able to select the resort name and location . After that, the user can pick date and time to book their activity. Finally, the users can book activities at the resort. I used express and handlebars. Also, MongoDB was used as database and Mongoose was used as middleware. 
+This app is a full stack server application. The goal of the app is allowing users to book travel activities at a resort. Users will sign up and share their name and email ,users will be able to select the resort name and location . After that,the user can pick date ,time and activity. Finally, users can book activities at the resort. I used express and handlebars. Also, MongoDB was used as database and Mongoose was used as middleware. 
 
 # Deployed App
 
