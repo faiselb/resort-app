@@ -118,23 +118,29 @@ header {
 .user-signup {
     text-align: center;
     color: #cc5500;
-     font-size: 25px;   
+     font-size: 22px;   
 }
 
 .btn-custom {
     background-color: #cc5500;
+    color: #ececec;
+    font-size: 16px;
+}
+
+
+.btn-custom:hover {
     color: #ececec;
 }
 
 a {
     text-decoration: none;
     color: #cc5500;
-    font-size: 25px;   
+    font-size: 22px;   
 }
 
 .activity {
     text-align: center;
     color: #cc5500;
     font-size: 22px;
-
 }
+
