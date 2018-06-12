@@ -18,9 +18,9 @@ https://trello.com/c/ZX75CZBB
 
 https://trello.com/c/KUFAM5Jb
 
-# libraries and sources
+# libraries
 
--Handlebars
--Express
--Mongoose (and mongodb)
--Bootstrap
+* Handlebars
+* Express
+* Mongoose (and mongodb)
+* Bootstrap
